@@ -1,0 +1,34 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+body h1 {
+  text-align: center;
+}
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+#map-container svg {
+  width: auto;
+  height: auto;
+}
+
+svg.ready path {
+  fill: rgba(0, 128, 0, 0.445) !important;
+}
+
+.highlight {
+  fill: orange !important;
+  stroke: black;
+  stroke-width: 2;
+}
+
+.complete {
+  fill: black !important;
+}

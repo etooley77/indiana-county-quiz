@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indiana County Quiz</title>
+    <link rel="stylesheet" href="/src/styles/style.css" />
+</head>
+<body>
+    <h1>Indiana County Quiz</h1>
+
+	<div id="game-container">
+		<div id="map-container">
+        <!-- SVG will be injected here -->
+        </div>
+
+        <div id="controls">
+        <input id="answer-input" type="text" placeholder="Type county name..." />
+        <button id="submit-btn">Submit</button>
+
+        <div id="stats">
+            <p>Score: <span id="score">0</span></p>
+            <p>Time: <span id="timer">180</span></p>
+        </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
