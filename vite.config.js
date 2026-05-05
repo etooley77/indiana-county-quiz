@@ -1,5 +1,4 @@
 export default {
-    server: {
-        open: true
-    }
+    base: '/indiana-county-quiz',
+    server: { open: true }
 };
