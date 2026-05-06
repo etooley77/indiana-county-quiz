@@ -7,6 +7,7 @@ export async function loadSVG() {
 	return container.querySelector("svg");
 }
 
+// overrides the default color of all counties
 export function readyAll() {
 	const paths = document.querySelectorAll("svg path");
 	paths.forEach(path => {
@@ -14,6 +15,7 @@ export function readyAll() {
 	});
 }
 
+// highlights the county that is currently selected
 export function highlightCounty(id) {
 	clearHighlights();
   	const el = document.getElementById(id);
@@ -24,12 +26,14 @@ export function highlightCounty(id) {
 	parent.append(el);
 }
 
+// remove highlights from all counties
 export function clearHighlights() {
   	document.querySelectorAll(".highlight").forEach(el =>
 		el.classList.remove("highlight")
   	);
 }
 
+// show that a county has been successfully completed
 export function completeCounty(id) {
 	const el = document.getElementById(id);
 	if (el) el.classList.add("complete")
