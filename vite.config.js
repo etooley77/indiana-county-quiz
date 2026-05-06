@@ -1,4 +1,4 @@
 export default {
-    base: '/indiana-county-quiz/map.svg',
+    base: '',
     server: { open: true }
 };
