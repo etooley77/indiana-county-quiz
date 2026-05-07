@@ -7,18 +7,20 @@ import { highlightCounty, completeCounty } from "./svg.js";
  * @param {function():void} pickNext - Callback to pick the next county or update the UI accordingly.
  */
 export class Game {
-	constructor(updateScore, pickNext) {
+	constructor(updateScore) {
 		this.score = 0;
 		this.remaining = [...counties];
 		this.updateScore = updateScore;
-		this.pickNext = pickNext;
+		// this.nextCounty();
 	}
 
 	nextCounty() {
 		const index = Math.floor(Math.random() * this.remaining.length);
 		this.current = this.remaining[index];
+		console.log(this.current);
+		console.log(this.current.replace(/\s+/g, ""));
 		if (this.current) {
-			highlightCounty(this.current.replace(/\s+/g, ""));
+			highlightCounty(this.current);
 		}
 		return this.current;
 	}

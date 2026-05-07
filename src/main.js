@@ -7,7 +7,7 @@ async function init() {
     await loadSVG();
     readyAll();
 
-    const game = new Game(updateScoreDisplay, () => game.nextCounty());
+    const game = new Game(updateScoreDisplay);
 
     setupUI(answer => game.submit(answer));
 
